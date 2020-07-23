@@ -1,4 +1,4 @@
-package org.isi.grh.entity;
+package org.isi.grh.utils.enums;
 
 public enum Role {
 

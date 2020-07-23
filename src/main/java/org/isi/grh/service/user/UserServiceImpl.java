@@ -1,7 +1,7 @@
 package org.isi.grh.service.user;
 
 import org.isi.grh.entity.CurrentUser;
-import org.isi.grh.entity.Role;
+import org.isi.grh.utils.enums.Role;
 import org.isi.grh.entity.User;
 import org.isi.grh.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

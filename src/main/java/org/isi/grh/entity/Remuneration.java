@@ -1,15 +1,15 @@
 package org.isi.grh.entity;
 
 import lombok.Data;
-import org.isi.grh.utils.enums.DepartmentType;
+import org.isi.grh.utils.enums.RemunerationType;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Data
 @Entity
-@Table(name = "departments")
-public class Department {
+@Table(name = "remunerations")
+public class Remuneration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,5 +18,5 @@ public class Department {
     private String name;
 
     @Enumerated(EnumType.STRING)
-    private DepartmentType type;
+    private RemunerationType type;
 }

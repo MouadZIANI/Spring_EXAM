@@ -1,5 +1,7 @@
 package org.isi.grh.entity;
 
+import org.isi.grh.utils.enums.Role;
+
 import javax.persistence.*;
 
 @Entity

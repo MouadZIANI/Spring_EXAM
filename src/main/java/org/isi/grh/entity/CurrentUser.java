@@ -1,5 +1,6 @@
 package org.isi.grh.entity;
 
+import org.isi.grh.utils.enums.Role;
 import org.springframework.security.core.authority.AuthorityUtils;
 
 
