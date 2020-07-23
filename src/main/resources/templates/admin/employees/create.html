@@ -16,7 +16,7 @@
                             <h4 class="card-title mb-0">Add new employee</h4>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form th:action="@{/employees/save}" method="post" th:object="${employee}">
                                 <div class="row">
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">

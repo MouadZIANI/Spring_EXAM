@@ -34,11 +34,19 @@ public class DepartementController {
     }
 
     @PostMapping(path = "/departments/save")
-    public String store(@Valid Department department, BindingResult result, Model model){
+    public String store(@Valid Department department, BindingResult result, Model model)
+    {
         if (result.hasErrors()) {
             return "admin/departments/create";
         }
         departmentService.save(department);
+        return "redirect:departments";
+    }
+
+    @GetMapping(path = "/departments/delete")
+    public String deleteEmployee(Long id)
+    {
+        departmentService.deleteById(id);
         return "redirect:departments";
     }
 }
