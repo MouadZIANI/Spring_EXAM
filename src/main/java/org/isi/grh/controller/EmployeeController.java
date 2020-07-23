@@ -21,7 +21,9 @@ public class EmployeeController {
     @GetMapping(path = "/employees")
     public String list(Model model) {
         model.addAttribute("employees", employeeService.findAllEmployees());
-        return "employees";
+        model.addAttribute("managers", employeeService.findAllManagers());
+        
+        return "admin/employees/index";
     }
 
     @GetMapping(path = "/employee_form")

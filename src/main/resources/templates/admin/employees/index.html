@@ -38,56 +38,36 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>Mouad ZIANI</td>
-                                        <td>Email</td>
-                                        <td>067709837383</td>
-                                        <td>20/04/1997</td>
+                                    <tr th:each="employee : ${employees}">
+                                        <td th:text="${employee.firstName + "" + employee.lastName}"></td>
+                                        <td th:text="${employee.email}">Email</td>
+                                        <td th:text="${employee.phoneNumber}"></td>
+                                        <td th:text="${employee.birthDate}"></td>
+                                        <td>Normal Employee</td>
+                                        <td th:text="${employee.department.name}"></td>
+                                        <td>
+                                            <div class="dropdown action-label drop-active">
+                                                <a href="javascript:void(0)" class="btn btn-white btn-sm dropdown-toggle" data-toggle="dropdown"> Actions <i class="caret"></i></a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Edit</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Delete</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr th:each="manager : ${managers}">
+                                        <td th:text="${manager.firstName + "" + manager.lastName}"></td>
+                                        <td th:text="${manager.email}">Email</td>
+                                        <td th:text="${manager.phoneNumber}"></td>
+                                        <td th:text="${manager.birthDate}"></td>
                                         <td>Manager</td>
-                                        <td>department 1</td>
+                                        <td th:text="${manager.department.name}"></td>
                                         <td>
                                             <div class="dropdown action-label drop-active">
                                                 <a href="javascript:void(0)" class="btn btn-white btn-sm dropdown-toggle" data-toggle="dropdown"> Actions <i class="caret"></i></a>
                                                 <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Edit</a>
                                                     <a class="dropdown-item" href="javascript:void(0)"> Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Inactive</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Invited</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Imad Moussaoui</td>
-                                        <td>imag@gmail.com</td>
-                                        <td>067709837383</td>
-                                        <td>10/01/1995</td>
-                                        <td>Employee</td>
-                                        <td>department 2</td>
-                                        <td>
-                                            <div class="dropdown action-label drop-active">
-                                                <a href="javascript:void(0)" class="btn btn-white btn-sm dropdown-toggle" data-toggle="dropdown"> Actions <i class="caret"></i></a>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Inactive</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Invited</a>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hicham ALAOUI</td>
-                                        <td>hichame@gmail.com</td>
-                                        <td>06770888888</td>
-                                        <td>15/06/1996</td>
-                                        <td>Employee</td>
-                                        <td>department 1</td>
-                                        <td>
-                                            <div class="dropdown action-label drop-active">
-                                                <a href="javascript:void(0)" class="btn btn-white btn-sm dropdown-toggle" data-toggle="dropdown"> Actions <i class="caret"></i></a>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Delete</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Inactive</a>
-                                                    <a class="dropdown-item" href="javascript:void(0)"> Invited</a>
                                                 </div>
                                             </div>
                                         </td>
