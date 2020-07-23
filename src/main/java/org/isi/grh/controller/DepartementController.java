@@ -39,14 +39,15 @@ public class DepartementController {
         if (result.hasErrors()) {
             return "admin/departments/create";
         }
-        departmentService.save(department);
+
+        this.departmentService.save(department);
         return "redirect:departments";
     }
 
     @GetMapping(path = "/departments/delete")
     public String deleteEmployee(Long id)
     {
-        departmentService.deleteById(id);
+        this.departmentService.deleteById(id);
         return "redirect:departments";
     }
 }

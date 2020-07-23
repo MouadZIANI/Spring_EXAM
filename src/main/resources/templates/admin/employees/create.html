@@ -21,13 +21,15 @@
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">
                                             <label>First Name</label>
-                                            <input type="text" class="form-control" placeholder="First Name">
+                                            <input type="text" class="form-control" th:field="*{firstName}" placeholder="First Name">
+                                            <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">
                                             <label>Last name</label>
                                             <input type="text" class="form-control" placeholder="Last Name">
+                                            <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="text-danger"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -35,13 +37,15 @@
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="email" class="form-control" placeholder="Email">
+                                            <input type="email" class="form-control" th:field="*{email}" placeholder="Email">
+                                            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">
                                             <label>Phone Number</label>
-                                            <input type="text" class="form-control" placeholder="Phone Number">
+                                            <input type="text" class="form-control" th:field="*{phoneNumber}" placeholder="Phone Number">
+                                            <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" class="text-danger"></span>
                                         </div>
                                     </div>
                                 </div>
@@ -49,44 +53,40 @@
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">
                                             <label>Birth Date</label>
-                                            <input type="text" class="form-control" placeholder="Birth Date">
+                                            <input type="text" class="form-control" th:field="*{birthDate}" placeholder="Birth Date">
+                                            <span th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}" class="text-danger"></span>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">
-                                            <label>
-                                            Departement
-                                            <span class="text-danger">*</span>
-                                            </label>
-                                            <select class="form-control select">
-                                            <option>department 1</option>
+                                            <label>Departement<span class="text-danger">*</span></label>
+                                            <select class="form-control select" th:field="*{department}">
+                                                <option th:each="department : ${departments}" th:value="${department.id}" th:text="${department.name}"></option>
                                             </select>
+                                            <span th:if="${#fields.hasErrors('department')}" th:errors="*{department}" class="text-danger"></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6 leave-col">
-                                        <div class="form-group">
-                                            <label>
-                                            Role
-                                            <span class="text-danger">*</span>
-                                            </label>
-                                            <select class="form-control select">
-                                            <option>Employee</option>
-                                            <option>Variable</option>
+                                        <div class="col-md-12 form-group">
+                                            <select class="form-control select" name="role">
+                                                <option
+                                                        th:each="type : ${T(org.isi.grh.utils.enums.Role).values()}"
+                                                        th:value="${role}"
+                                                        th:text="${role}">
+                                                </option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 leave-col">
                                         <div class="form-group">
-                                            <label>
-                                            Remuniration
-                                            <span class="text-danger">*</span>
-                                            </label>
-                                            <select class="form-control select">
-                                            <option>Fixed</option>
-                                            <option>Variable</option>
+                                            <label>Remuniration<span class="text-danger">*</span></label>
+                                            <select class="form-control select" th:field="*{remuneration}">
+                                                <option>Fixed</option>
+                                                <option>Variable</option>
                                             </select>
+                                            <span th:if="${#fields.hasErrors('remuneration')}" th:errors="*{remuneration}" class="text-danger"></span>
                                         </div>
                                     </div>
                                 </div>
