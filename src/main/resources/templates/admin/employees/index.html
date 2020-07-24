@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/admin">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Title -->
+		<title>Departements</title>
+	</head>
+<body>
+    <div layout:fragment="content" class="col-xl-9 col-lg-8  col-md-12">
+        <div>
+            <div class="card shadow-sm ctm-border-radius">
+                <div class="card-body align-center">
+                    <h4 class="card-title float-left mb-0 mt-2">Employees</h4>
+                    <ul class="nav nav-tabs float-right border-0 tab-list-emp">
+                        <li class="nav-item pl-3">
+                            <a th:href="@{departments/create}" class="btn btn-theme button-1 text-white ctm-border-radius p-2 add-person ctm-btn-padding"><i class="fa fa-plus"></i> Add New Employee</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ctm-border-radius shadow-sm card">
+                <div class="card-body">
+
+                    <!--Content tab-->
+                    <div class="table-back employee-office-table">
+                        <div class="table-responsive">
+                            <table class="table custom-table table-hover table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Full Name</th>
+                                        <th>Email</th>
+                                        <th>Phone Number</th>
+                                        <th>Birth Date</th>
+                                        <th>Type</th>
+                                        <th>Department</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Mouad ZIANI</td>
+                                        <td>Email</td>
+                                        <td>067709837383</td>
+                                        <td>20/04/1997</td>
+                                        <td>Manager</td>
+                                        <td>department 1</td>
+                                        <td>
+                                            <div class="dropdown action-label drop-active">
+                                                <a href="javascript:void(0)" class="btn btn-white btn-sm dropdown-toggle" data-toggle="dropdown"> Actions <i class="caret"></i></a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Delete</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Inactive</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Invited</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Imad Moussaoui</td>
+                                        <td>imag@gmail.com</td>
+                                        <td>067709837383</td>
+                                        <td>10/01/1995</td>
+                                        <td>Employee</td>
+                                        <td>department 2</td>
+                                        <td>
+                                            <div class="dropdown action-label drop-active">
+                                                <a href="javascript:void(0)" class="btn btn-white btn-sm dropdown-toggle" data-toggle="dropdown"> Actions <i class="caret"></i></a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Delete</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Inactive</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Invited</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hicham ALAOUI</td>
+                                        <td>hichame@gmail.com</td>
+                                        <td>06770888888</td>
+                                        <td>15/06/1996</td>
+                                        <td>Employee</td>
+                                        <td>department 1</td>
+                                        <td>
+                                            <div class="dropdown action-label drop-active">
+                                                <a href="javascript:void(0)" class="btn btn-white btn-sm dropdown-toggle" data-toggle="dropdown"> Actions <i class="caret"></i></a>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Delete</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Inactive</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"> Invited</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

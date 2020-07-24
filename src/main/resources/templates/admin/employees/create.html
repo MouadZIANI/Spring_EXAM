@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html   lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	    layout:decorator="layouts/admin">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Title -->
+		<title>Departements</title>
+	</head>
+<body>
+    <div layout:fragment="content" class="col-xl-9 col-lg-8  col-md-12">
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card ctm-border-radius shadow-sm">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Add new employee</h4>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input type="text" class="form-control" placeholder="First Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>Last name</label>
+                                            <input type="text" class="form-control" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" class="form-control" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>Phone Number</label>
+                                            <input type="text" class="form-control" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>Birth Date</label>
+                                            <input type="text" class="form-control" placeholder="Birth Date">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>
+                                            Departement
+                                            <span class="text-danger">*</span>
+                                            </label>
+                                            <select class="form-control select">
+                                            <option>department 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>
+                                            Role
+                                            <span class="text-danger">*</span>
+                                            </label>
+                                            <select class="form-control select">
+                                            <option>Employee</option>
+                                            <option>Variable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6 leave-col">
+                                        <div class="form-group">
+                                            <label>
+                                            Remuniration
+                                            <span class="text-danger">*</span>
+                                            </label>
+                                            <select class="form-control select">
+                                            <option>Fixed</option>
+                                            <option>Variable</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <a href="javascript:void(0);" class="btn btn-theme button-1 text-white ctm-border-radius mt-4">Apply</a>
+                                    <a href="javascript:void(0);" class="btn btn-danger text-white ctm-border-radius mt-4">Cancel</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card ctm-border-radius shadow-sm">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Leave Details</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="employee-office-table">
+                                <div class="table-responsive">
+                                    <table class="table custom-table mb-0 table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Total Employees</th>
+                                                <th>First Half</th>
+                                                <th>Second Half</th>
+                                                <th>Working From Home</th>
+                                                <th>Absent</th>
+                                                <th>Today Aways</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>05 May 2019</td>
+                                                <td>7</td>
+                                                <td>6</td>
+                                                <td>6</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="card ctm-border-radius shadow-sm">
+                        <div class="card-header">
+                            <h4 class="card-title mb-0">Today Leaves</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="employee-office-table">
+                                <div class="table-responsive">
+                                    <table class="table custom-table mb-0 table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Employee</th>
+                                                <th>Leave Type</th>
+                                                <th>From</th>
+                                                <th>To</th>
+                                                <th>Days</th>
+                                                <th>Remaining Days</th>
+                                                <th>Notes</th>
+                                                <th>Status</th>
+                                                <th class="text-right">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="employment.html" class="avatar"><img alt="avatar image" src="assets/img/profiles/img-5.jpg" class="img-fluid"></a>
+                                                    <h2><a href="employment.html">Danny Ward</a></h2>
+                                                </td>
+                                                <td>Parental Leave</td>
+                                                <td>05 Dec 2019</td>
+                                                <td>07 Dec 2019</td>
+                                                <td>3</td>
+                                                <td>9</td>
+                                                <td>Parenting Leave</td>
+                                                <td><a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm">Approved</a></td>
+                                                <td class="text-right text-danger"><a href="javascript:void(0);" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete">
+                                                    <span class="lnr lnr-trash"></span> Delete
+                                                </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="employment.html" class="avatar"><img src="assets/img/profiles/img-4.jpg" alt="Linda Craver" class="img-fluid"></a>
+                                                    <h2><a href="employment.html">Linda Craver</a></h2>
+                                                </td>
+                                                <td>Sick Leave</td>
+                                                <td>05 Dec 2019</td>
+                                                <td>05 Dec 2019</td>
+                                                <td>1</td>
+                                                <td>11</td>
+                                                <td>Going to Hospital</td>
+                                                <td><a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm">Approved</a></td>
+                                                <td class="text-right text-danger"><a href="javascript:void(0);" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete">
+                                                            <span class="lnr lnr-trash"></span> Delete
+                                                        </a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a href="employment.html" class="avatar"><img src="assets/img/profiles/img-3.jpg" alt="Jenni Sims" class="img-fluid"></a>
+                                                    <h2><a href="employment.html">Jenni Sims</a></h2>
+                                                </td>
+                                                <td>Working From Home</td>
+                                                <td>05 Dec 2019</td>
+                                                <td>05 Dec 2019</td>
+                                                <td>1</td>
+                                                <td>11</td>
+                                                <td>Raining</td>
+                                                <td><a href="javascript:void(0)" class="btn btn-theme ctm-border-radius text-white btn-sm">Approved</a></td>
+                                                <td class="text-right text-danger"><a href="javascript:void(0);" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#delete">
+                                                            <span class="lnr lnr-trash"></span> Delete
+                                                        </a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html   lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	    layout:decorator="layouts/admin">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Title -->
+		<title>Departements</title>
+	</head>
+<body>
+    <div layout:fragment="content" class="col-xl-9 col-lg-8  col-md-12">
+        <form th:action="@{/departments/save}" method="post" th:object="${department}">
+            <div class="col-md-12">
+                <div class="accordion add-employee" id="accordion-details">
+                    <div class="card shadow-sm ctm-border-radius">
+                        <div class="card-header" id="basic1">
+                            <h4 class="cursor-pointer mb-0">
+                                <a class=" coll-arrow d-block text-dark" href="javascript:void(0)" data-toggle="collapse" data-target="#basic-one" aria-expanded="true">
+                                    Add new departement
+                                </a>
+                            </h4>
+                        </div>
+                        <div class="card-body p-0">
+                            <div id="basic-one" class="collapse show ctm-padding" aria-labelledby="basic1" data-parent="#accordion-details">
+                                <div class="row">
+                                    <div class="col-12 form-group">
+                                        <input type="text" class="form-control" placeholder="Department Name" th:field="*{name}">
+                                        <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-md-12 form-group">
+                                        <select class="form-control select" th:field="*{type}">
+                                            <option
+                                                    th:each="type : ${T(org.isi.grh.utils.enums.DepartmentType).values()}"
+                                                    th:value="${type}"
+                                                    th:text="${type}">
+                                            </option>
+                                        </select>
+                                        <span th:if="${#fields.hasErrors('type')}" th:errors="*{type}" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-theme button-1 text-white ctm-border-radius mt-4">Save</button>
+                                <button type="reset" class="btn btn-danger text-white ctm-border-radius mt-4">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </from>
+    </div>
+</body>
